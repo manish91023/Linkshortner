@@ -54,7 +54,7 @@ app.get('/:shortid',async(req,res)=>{
         }
         res.redirect(`${data.redirectUrl}`)
     } catch (error) {
-        res.send("error to find data")
+        res.status(500).send("error to find data")
     } 
 })
 
